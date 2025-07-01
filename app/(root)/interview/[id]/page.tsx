@@ -28,7 +28,7 @@ const page = async ({params}: RouteParams) => {
             />
             <h3 className="capitalize">{interview.role} Interview</h3>
           </div>
-          
+
           <DisplayTechIcons techStack={interview.techstack} />
         </div>
 
@@ -38,7 +38,7 @@ const page = async ({params}: RouteParams) => {
       </div>
 
       <Agent
-        userName={user?.name!}
+        userName={user?.name || ''}
         userId={user?.id}
         interviewId={id}
         type="interview"
